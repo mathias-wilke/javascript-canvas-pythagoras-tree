@@ -19,8 +19,10 @@ function draw(){
     ctx.fillText("Depth: " + recursion, 0, 40); 
     ctx.fillText("Angle: " + angle, 0, 30); 
     ctx.fillText("Size: " + width, 0, 50); 
-    ctx.translate((canvas.width / 2) - width / 2, canvas.height - 100);
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-pythagoras-tree.git", 0, canvas.height - 4); 
+    ctx.translate((canvas.width / 2) - width / 2, (canvas.height / 2) + 200);
     drawTree(recursion, width, angle);
+    
 }
 
 function drawTree(j, width, angle){
@@ -29,7 +31,7 @@ function drawTree(j, width, angle){
         return;
     }
 
-    if(document.getElementById("colors").value == 1){
+    if(document.getElementById("colors").checked == 1){
         var gradient = ctx.createLinearGradient(0, 0, 800, 800);
         gradient.addColorStop("0", rainbow(recursion,j));
         gradient.addColorStop("1", rainbow(recursion,j));
@@ -82,7 +84,7 @@ function clear(){
 function resizeCanvas(){
     canvas.width = window.innerWidth - 20;
     //let us keep this sixteen by nine
-    canvas.height = ((window.innerWidth) / 16) * 9;
+    canvas.height = window.innerHeight - 20;
 }
 
 //let us call the function once at the start to get the user's canvas size
@@ -97,4 +99,5 @@ function loop() {
     draw();
     window.requestAnimationFrame(loop)
 }
+
 window.requestAnimationFrame(loop)

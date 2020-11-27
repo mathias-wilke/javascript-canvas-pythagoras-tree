@@ -7,16 +7,19 @@
     </head>
     <body>
         <canvas id="screen" width="800px" height="450px"></canvas>
-        <p>SETTINGS</p>
         <div class="slidecontainer">
+            <p>SETTINGS</p>
             <p>Recursion Depth</p>
             <input type="range" min="1" max="12" value="2" class="slider" id="recursion">
             <p>Angle</p>
             <input type="range" min="0" max="90" value="45" class="slider" id="angle">
             <p>Size</p>
-            <input type="range" min="1" max="100" value="70" class="slider" id="length">
+            <input type="range" min="1" max="120" value="70" class="slider" id="length">
             <p>Color</p>
-            <input type="range" min="0" max="1" value="70" class="slider" id="colors">
+            <label class="switch">
+                <input type="checkbox" id="colors">
+                <span class="slide-switch round"></span>
+            </label>
         </div>
         <script src="js/rainbow.js"></script>
         <script src="js/canvas-fun.js"></script>
