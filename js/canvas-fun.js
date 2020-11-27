@@ -83,7 +83,6 @@ function clear(){
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
     canvas.width = window.innerWidth - 20;
-    //let us keep this sixteen by nine
     canvas.height = window.innerHeight - 20;
 }
 
