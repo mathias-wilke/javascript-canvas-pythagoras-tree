@@ -14,12 +14,12 @@ var recursion = document.getElementById("recursion").value;
 function draw(){
     ctx.fillStyle = "white";
     ctx.font = "20px Arial";
-    ctx.fillText("JavaScript Pythagoras Tree", 0, 15); 
+    ctx.fillText("JavaScript Pythagoras Tree", 5, canvas.height - 60); 
     ctx.font = "10px Arial";
-    ctx.fillText("Depth: " + recursion, 0, 40); 
-    ctx.fillText("Angle: " + angle, 0, 30); 
-    ctx.fillText("Size: " + width, 0, 50); 
-    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-pythagoras-tree.git", 0, canvas.height - 4); 
+    ctx.fillText("Depth: " + recursion, 5, canvas.height - 50); 
+    ctx.fillText("Angle: " + angle, 5, canvas.height - 40); 
+    ctx.fillText("Size: " + width, 5, canvas.height - 30); 
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-pythagoras-tree.git", 5, canvas.height - 10); 
     ctx.translate((canvas.width / 2) - width / 2, (canvas.height / 2) + 200);
     drawTree(recursion, width, angle);
     
@@ -82,8 +82,8 @@ function clear(){
 
 //if the user changes the size of the window we have do recalculate
 function resizeCanvas(){
-    canvas.width = window.innerWidth - 20;
-    canvas.height = window.innerHeight - 20;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 }
 
 //let us call the function once at the start to get the user's canvas size
