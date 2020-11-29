@@ -6,18 +6,26 @@
         <link rel="stylesheet" href="css/canvas-fun.css">
     </head>
     <body>
+        <div id="menue">
+            <ul>
+                <li><a href="https://www.mathiaswilke.de">mathiaswilke.de</a></li>
+                <li><a href="https://www.mathiaswilke.de/pythagoras">Pythagoras</a></li>
+                <li><a href="https://www.mathiaswilke.de/sierpinski">Sierpinski</a></li>
+                <li><a href="https://www.mathiaswilke.de">V-Tree</a></li>
+            </ul>
+        </div>
         <canvas id="screen" width="800px" height="450px"></canvas>
         <div class="slidecontainer">
             <p>SETTINGS</p>
             <p>Recursion Depth</p>
-            <input type="range" min="1" max="12" value="2" class="slider" id="recursion">
+            <input type="range" min="1" max="12" value="6" class="slider" id="recursion">
             <p>Angle</p>
-            <input type="range" min="0" max="90" value="45" class="slider" id="angle">
+            <input type="range" min="0" max="90" value="29" class="slider" id="angle">
             <p>Size</p>
-            <input type="range" min="1" max="120" value="70" class="slider" id="length">
+            <input type="range" min="1" max="120" value="110" class="slider" id="length">
             <p>Color</p>
             <label class="switch">
-                <input type="checkbox" id="colors">
+                <input checked="true" type="checkbox" id="colors">
                 <span class="slide-switch round"></span>
             </label>
         </div>

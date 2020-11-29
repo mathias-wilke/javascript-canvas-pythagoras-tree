@@ -5,6 +5,43 @@
     padding:0;
 }
 
+#menue{
+    height: 43px;
+    z-index: 2;
+    background-color: rgba(51, 51, 51, 0);
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+}
+
+#menue:hover{
+    background-color: rgba(51, 51, 51, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+li a:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
 canvas{
     display:block;
 }
@@ -23,7 +60,7 @@ p {
     width: 20%;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 60px;
     z-index: 1;
     background-color: rgba(51, 51, 51, 0.5);
     padding-bottom: 20px;
