@@ -1,4 +1,3 @@
-
 var canvas = document.getElementById("screen");
 var ctx = canvas.getContext("2d");
 
@@ -13,13 +12,17 @@ var recursion = document.getElementById("recursion").value;
 //implement your drawing here.
 function draw(){
     ctx.fillStyle = "white";
-    ctx.font = "20px Arial";
-    ctx.fillText("JavaScript Pythagoras Tree", 5, canvas.height - 60); 
-    ctx.font = "10px Arial";
-    ctx.fillText("Depth: " + recursion, 5, canvas.height - 50); 
-    ctx.fillText("Angle: " + angle, 5, canvas.height - 40); 
-    ctx.fillText("Size: " + width, 5, canvas.height - 30); 
-    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-pythagoras-tree.git", 5, canvas.height - 10); 
+    ctx.font = "20px monospace";
+    let baseY = canvas.height - 96;
+    let lineHeight = 19;
+    ctx.fillText("JavaScript Pythagoras Tree", 15, baseY); 
+    ctx.font = "16px monospace";
+    ctx.fillText("Depth: " + recursion, 15, baseY + lineHeight); 
+    ctx.fillText("Angle: " + angle, 15, baseY + 2 * lineHeight); 
+    ctx.fillText("Size: " + width, 15, baseY + 3 * lineHeight); 
+    ctx.fillStyle = "#00ffff";
+    ctx.fillText("https://github.com/mathias-wilke/javascript-canvas-pythagoras-tree", 15, baseY + 4 * lineHeight); 
+    ctx.fillStyle = "white";
     ctx.translate((canvas.width / 2) - width / 2, (canvas.height / 2) + 200);
     drawTree(recursion, width, angle);
     
